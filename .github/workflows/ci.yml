@@ -1,0 +1,25 @@
+name: ci
+on:
+  push:
+    branches: 
+    - main 
+  pull_request:
+    branches: 
+    - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: baixar codigo
+        uses: actions/checkout@v6
+
+      - name: configurar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '20'
+
+      - name: instalar dependencias
+        run: npm ci
+
+      - name: executar testes
+        run: npm test
