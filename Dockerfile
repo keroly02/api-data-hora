@@ -10,4 +10,4 @@ COPY src ./src
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm", "src/server.js"]

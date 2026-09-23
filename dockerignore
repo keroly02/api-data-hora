@@ -1,0 +1,9 @@
+import Test from "supertest/lib/test"
+
+node_modules
+npm-debug.log
+.git 
+.github
+test
+coverage
+README.md
